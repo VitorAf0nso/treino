@@ -1,0 +1,27 @@
+{
+  "name": "treino",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "icons": "node scripts/make-icons.mjs",
+    "dev": "npm run icons && vite",
+    "build": "npm run icons && tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "test": "node scripts/test.mjs",
+    "deploy": "npm run build && gh-pages -d dist -t"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
